@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: gateway
+  profiles:
+    active: dev
+#    active: prod
+
+management:
+  endpoint:
+    info:
+      enable: true
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics,prometheus,loggers
+  metrics:
+    enable:
+      jvm: true
