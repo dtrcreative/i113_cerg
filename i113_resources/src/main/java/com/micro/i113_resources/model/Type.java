@@ -1,0 +1,5 @@
+package com.micro.i113_resources.model;
+
+public enum Type {
+    BUTTON, INPUT, LABEL, COLUMN_NAME, INFO, CHECKBOX, SWITCH, CHIP, ALERT, SNACKBAR, TITLE, SUBTITLE, TOAST, SELECT, RADIO
+}
