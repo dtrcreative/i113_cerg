@@ -2,10 +2,14 @@ package com.micro.i113_resources.service.converter;
 
 import com.micro.i113_resources.model.dto.LanguageDto;
 import com.micro.i113_resources.model.entity.LanguageEntity;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Component
+@AllArgsConstructor
 public class LanguageConverter {
 
     public List<LanguageDto> convertEntitiesToDto(List<LanguageEntity> entitiesList) {
