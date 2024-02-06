@@ -41,4 +41,14 @@ public class LanguageController {
         languageService.deleteSelected(values);
     }
 
+    @PostMapping("/upload-add")
+    public int uploadAndAddJson(@RequestBody List<LanguageDto> unitsDtoList) {
+        return languageService.createByListAndCountSuccessful(unitsDtoList);
+    }
+
+    @PostMapping("/upload-replace")
+    public int uploadWithReplaceJson(@RequestBody List<LanguageDto> unitsDtoList) {
+        return languageService.replaceAllByListAndCount(unitsDtoList);
+    }
+
 }

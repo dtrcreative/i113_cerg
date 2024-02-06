@@ -1,6 +1,5 @@
 package com.micro.i113_resources.model.entity;
 
-import com.micro.i113_resources.model.Type;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -10,7 +9,7 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name = "languages")
-public class LanguageEntity {
+public class LanguageEntity  implements Comparable<LanguageEntity>{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,12 +18,18 @@ public class LanguageEntity {
     @NonNull
     private String param;
 
-    @Enumerated(EnumType.STRING)
-    private Type type;
-
     @NonNull
     private String eng;
     private String rus;
+
+    @Override
+    public int compareTo(LanguageEntity o) {
+        if (param.equals(o.getParam())) {
+            return 0;
+        } else {
+            return 1;
+        }
+    }
 
 
 }

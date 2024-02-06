@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: eureka
+    name: eureka-server
 
 eureka:
   client:
@@ -16,7 +16,9 @@ eureka:
 
 logging:
   level:
-    root: info
+    root: warn
+  file:
+    name: logs/eureka/eureka.log
 #    com:
 #      netflix:
 #        eureka=OFF:

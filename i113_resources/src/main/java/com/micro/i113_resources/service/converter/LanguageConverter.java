@@ -28,7 +28,6 @@ public class LanguageConverter {
         return LanguageDto.builder()
                 .id(inputEntity.getId())
                 .param(inputEntity.getParam())
-                .type(inputEntity.getType())
                 .eng(inputEntity.getEng())
                 .rus(inputEntity.getRus())
                 .build();
@@ -37,7 +36,6 @@ public class LanguageConverter {
     public LanguageEntity convertDtoToEntity(LanguageDto inputDto) {
         return LanguageEntity.builder()
                 .param(inputDto.getParam())
-                .type(inputDto.getType())
                 .eng(inputDto.getEng())
                 .rus(inputDto.getRus())
                 .build();

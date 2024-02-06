@@ -1,7 +1,5 @@
 package com.micro.i113_resources.model.dto;
 
-import com.micro.i113_resources.model.Type;
-import jakarta.persistence.*;
 import lombok.*;
 
 @NoArgsConstructor
@@ -14,9 +12,6 @@ public class LanguageDto {
 
     @NonNull
     private String param;
-
-    @Enumerated(EnumType.STRING)
-    private Type type;
 
     @NonNull
     private String eng;

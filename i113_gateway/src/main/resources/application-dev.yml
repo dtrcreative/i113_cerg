@@ -49,6 +49,11 @@ spring:
           predicates:
             - Path=/api/events/**
 
+        - id: api-resource-service
+          uri: lb://api-resource-service
+          predicates:
+            - Path=/api/resource/**
+
 #          filters:
 #            TokenRelay=
 

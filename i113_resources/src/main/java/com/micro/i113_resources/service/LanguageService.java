@@ -54,5 +54,34 @@ public class LanguageService {
         repository.deleteAllById(selected);
     }
 
+    public int createByListAndCountSuccessful(List<LanguageDto> inputDtoList){
+        List<LanguageEntity> baseEntities = repository.findAll();
+        List<LanguageEntity> inputList = converter.convertDtoToEntities(inputDtoList);
+        int counter = 0;
+        for (LanguageEntity inputEntity : inputList) {
+            if(!isExist(baseEntities, inputEntity)){
+                repository.save(inputEntity);
+                counter++;
+            }
+        }
+        return counter;
+    }
+
+    private boolean isExist(List<LanguageEntity> inputLanguageList, LanguageEntity inputLanguageEntity){
+        for(LanguageEntity entity: inputLanguageList){
+            if(entity.compareTo(inputLanguageEntity) == 0){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public int replaceAllByListAndCount(List<LanguageDto> inputDtoList){
+        repository.deleteAll();
+        repository.saveAllAndFlush(converter.convertDtoToEntities(inputDtoList));
+        return inputDtoList.size();
+    }
+
+
 
 }
