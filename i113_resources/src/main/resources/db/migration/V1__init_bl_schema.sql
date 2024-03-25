@@ -12,6 +12,19 @@ CREATE TABLE IF NOT EXISTS languages
     rus   VARCHAR(200) NOT NULL
 );
 
+CREATE TABLE IF NOT EXISTS user_settings
+(
+    id    SERIAL PRIMARY KEY,
+    userid INTEGER  NOT NULL
+
+);
+
+CREATE TABLE IF NOT EXISTS users
+(
+    id    SERIAL PRIMARY KEY,
+    userid VARCHAR(200)  NOT NULL
+);
+
 
 
 

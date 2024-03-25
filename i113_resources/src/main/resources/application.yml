@@ -3,11 +3,7 @@ spring:
     name: api-resource-service
   profiles:
     active: dev
-  security:
-    oauth2:
-      resource-server:
-        jwt:
-          issuer-uri: http://localhost:28080/realms/i113_realm
+#    active: prod
   messages:
     always-use-message-format: false
     basename: messages/messages

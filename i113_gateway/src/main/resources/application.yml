@@ -9,10 +9,22 @@ management:
   endpoint:
     info:
       enable: true
+    gateway:
+      enabled: true
   endpoints:
     web:
+      cors:
+        allowed-origins: "*"
+        allowed-headers: "*"
+        allowed-methods:
+          - GET
+          - POST
+          - PUT
+          - DELETE
+          - OPTIONS
       exposure:
-        include: health,metrics,prometheus,loggers
+        include: info,health,metrics,prometheus,loggers,gateway
+      base-path: /public/info
   metrics:
     enable:
       jvm: true
