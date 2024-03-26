@@ -6,11 +6,11 @@ on:
 
 jobs:
   validating_docker:
-    runs-on: "self-hosted"
+    runs-on: self-hosted
 
     steps:
       - name: checkUser
-        run: 'echo $USER'
+        run: echo $USER
       - name: checkDocker        
-        run: 'docker version'
+        run: docker version
     
