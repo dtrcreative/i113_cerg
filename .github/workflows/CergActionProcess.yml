@@ -10,6 +10,8 @@ jobs:
 
     steps:
       - name: checkUser
-        run : echo "Hello Message"
+        run : echo $USER
+      - name: Docker version
+        run : docker version
 
     
