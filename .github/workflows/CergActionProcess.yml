@@ -5,7 +5,7 @@ on:
 
 jobs:
   validating_docker:
-    runs-on: "ditar-serv"
+    runs-on: "self-hosted"
 
     steps:
       - name: checkUser
