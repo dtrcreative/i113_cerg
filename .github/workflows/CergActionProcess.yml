@@ -1,15 +1,19 @@
 name: Cerg-action-process
 on: 
   push:
-    branches: -master
+    branches: 
+      - master
 
 jobs:
   validating_docker:
-    runs-on: "self-hosted"
+    runs-on: ubuntu-latest
 
     steps:
       - name: checkUser
-        run: 'echo $USER'
-      - name: checkDocker        
-        run: 'docker version'
+        run : echo $USER
+      - name: Docker version
+        run : docker version
+      - name: Docker ps
+        run : docker ps        
+
     
