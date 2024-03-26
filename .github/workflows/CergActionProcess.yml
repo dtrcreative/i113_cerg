@@ -6,11 +6,10 @@ on:
 
 jobs:
   validating_docker:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
       - name: checkUser
-        run: echo $USER
-      - name: checkDocker        
-        run: docker version
+        run : echo "Hello Message"
+
     
