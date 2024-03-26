@@ -13,5 +13,7 @@ jobs:
         run : echo $USER
       - name: Docker version
         run : docker version
+      - name: Docker ps
+        run : docker ps        
 
     
