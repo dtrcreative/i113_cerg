@@ -2,7 +2,7 @@ name: Cerg-action-process
 on: 
   push:
     branches: 
-      -master
+      - master
 
 jobs:
   validating_docker:
