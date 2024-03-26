@@ -1,0 +1,15 @@
+name: Cerg-action-process
+on: 
+  push:
+    branches: -master
+
+jobs:
+  validating_docker:
+    runs-on: "self-hosted"
+
+    steps:
+      - name: checkUser
+        run: 'echo $USER'
+      - name: checkDocker        
+        run: 'docker version'
+    
