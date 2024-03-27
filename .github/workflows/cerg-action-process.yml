@@ -11,9 +11,12 @@ jobs:
     runs-on: self-hosted
     
     steps:
-      - name: Checkout
+      - name: PrintAppData
         run : |
-          echo "Acclication name: ${{ env.APPLICATION_NAME }}"
-          pwd
+          echo "Acclication name: ${{ env.APPLICATION_NAME}}"
+          
+      - name: Checkout
+        uses: actions/checkout@v1        
+      
 
 
