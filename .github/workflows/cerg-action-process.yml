@@ -9,7 +9,6 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: checkUser
-        run : echo $USER
-      - name: Docker ps
-        run : docker ps   
+      - name: Checkout
+        run : actions/checkout@v2
+
