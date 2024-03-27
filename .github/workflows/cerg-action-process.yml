@@ -21,6 +21,7 @@ jobs:
       - name: MavenVersion
         run : |
           cd i113_eureka
+          ls -la
           mvn -version         
         
 
