@@ -21,8 +21,8 @@ jobs:
       - name: MavenVersion
         run : |
           cd i113_gateway
-          ls -la
-          mvn -version         
+          
+                 
         
 
 
