@@ -1,4 +1,6 @@
 name: cerg-action-process
+env:
+  APPLICATION_NAME : "CERJ"
 on: 
   push:
     branches: 
@@ -7,8 +9,10 @@ on:
 jobs:
   validating_docker:
     runs-on: self-hosted
-
+    
     steps:
       - name: Checkout
-        run : actions/checkout@v2
+        run : |
+          echo "Acclication name: ${{ env.APPLICATION_NAME }}
+
 
