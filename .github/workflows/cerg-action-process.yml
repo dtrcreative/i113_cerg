@@ -16,7 +16,10 @@ jobs:
           echo "Acclication name: ${{ env.APPLICATION_NAME}}"
           
       - name: Checkout
-        uses: actions/checkout@v1        
+        uses: actions/checkout@v1     
+
+      - name: MavenVersion
+        run : mvn -version         
       
 
 
