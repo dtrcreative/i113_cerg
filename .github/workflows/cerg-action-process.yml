@@ -19,7 +19,9 @@ jobs:
         uses: actions/checkout@v1     
 
       - name: MavenVersion
-        run : mvn -version         
-      
+        run : |
+          cd i113_eureka
+          mvn -version         
+        
 
 
