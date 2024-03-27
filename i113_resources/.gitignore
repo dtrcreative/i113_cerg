@@ -71,5 +71,7 @@ buildNumber.properties
 /target
 src/main/resources/application-prod.yml
 /src/test/
-/mvnw
+
 /mvnw.cmd
+/mvnw
+
