@@ -14,6 +14,6 @@ jobs:
       - name: Checkout
         run : |
           echo "Acclication name: ${{ env.APPLICATION_NAME }}"
-          echo pwd
+          pwd
 
 
