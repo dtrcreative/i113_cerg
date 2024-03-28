@@ -1,6 +1,6 @@
 name: cerg-action-process
 env:
-  APPLICATION_NAME : "CERJ2"
+  APPLICATION_NAME : "CERJ"
 on: 
   push:
     branches: 
@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: PrintAppData
         run : |
-          echo "Acclication name: ${{ env.APPLICATION_NAME}}"
+          echo "Application name: ${{ env.APPLICATION_NAME}}"
           
       - name: Checkout
         uses: actions/checkout@v1     
