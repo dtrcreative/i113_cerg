@@ -7,7 +7,7 @@ on:
       - master
 
 jobs:
-  validating_docker:
+  CerjDocker:
     runs-on: self-hosted
     
     steps:
@@ -17,7 +17,40 @@ jobs:
           
       - name: Checkout
         uses: actions/checkout@v1     
+
+      - name: Maven Eureca clean-build
+        run : |
+          cd i113_eureka
+          mvn clean
+          mvn install
           
+      - name: Docker Eureca update
+        run : |
+          cd i113_eureka
+          echo $USER
+          bash i113_eureka_update.sh   
+          
+      - name: Maven Gateway clean-build
+        run : |
+          cd i113_gateway
+          mvn clean
+          mvn install
+          
+      - name: Docker Gateway update
+        run : |
+          cd i113_eureka
+          bash i113_gateway_update.sh        
+
+      - name: Maven Resources clean-build
+        run : |
+          cd i113_resources
+          mvn clean
+          mvn install
+          
+      - name: Docker Resources update
+        run : |
+          cd i113_eureka
+          bash i113_resources_update.sh          
                  
         
 
