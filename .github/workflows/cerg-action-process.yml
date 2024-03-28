@@ -27,6 +27,7 @@ jobs:
           
       - name: Docker Eureca update
         run : |
+          pwd
           cd i113_eureka
           ./i113_gateway_update.sh
           cd -         
