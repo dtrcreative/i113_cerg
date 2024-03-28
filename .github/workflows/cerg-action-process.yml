@@ -23,14 +23,10 @@ jobs:
           cd i113_eureka
           mvn clean
           mvn install
-          cd -
           
       - name: Docker Eureca update
         run : |
-          pwd
-          cd i113_eureka
-          ./i113_gateway_update.sh
-          cd -         
+          ./i113_gateway_update.sh    
           
       - name: Maven Gateway clean-build
         run : |
