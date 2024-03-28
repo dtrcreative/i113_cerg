@@ -18,12 +18,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1     
 
-      - name: Maven clean-build
+      - name: Maven Eureca clean-build
         run : |
           cd i113_eureka
           mvn clean
           mvn install
+          cd ..
           
+      - name: Maven Gateway clean-build
+        run : |
+          cd i113_gateway
+          mvn clean
+          mvn install
+          cd ..          
+
+      - name: Maven Resources clean-build
+        run : |
+          cd i113_resources
+          mvn clean
+          mvn install
+          cd ..             
                  
         
 
