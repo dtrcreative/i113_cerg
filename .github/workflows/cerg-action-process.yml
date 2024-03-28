@@ -28,7 +28,7 @@ jobs:
         run : |
           cd i113_eureka
           pwd
-          la -la
+          ls -la
           ./i113_gateway_update.sh    
           
       - name: Maven Gateway clean-build
