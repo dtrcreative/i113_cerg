@@ -20,7 +20,7 @@ jobs:
 
       - name: Maven clean-build
         run : |
-          pwd
+          cd i113_eureka
           mvn clean
           mvn install
           
