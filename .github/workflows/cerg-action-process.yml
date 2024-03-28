@@ -1,6 +1,6 @@
 name: cerg-action-process
 env:
-  APPLICATION_NAME : "CERJ"
+  APPLICATION_NAME : "CERG"
 on: 
   push:
     branches: 
