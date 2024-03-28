@@ -28,7 +28,7 @@ jobs:
         run : |
           cd i113_eureka
           echo $USER
-          ./i113_eureka_update.sh   
+          bash i113_eureka_update.sh   
           
       - name: Maven Gateway clean-build
         run : |
@@ -39,7 +39,7 @@ jobs:
       - name: Docker Gateway update
         run : |
           cd i113_eureka
-          ./i113_gateway_update.sh        
+          bash i113_gateway_update.sh        
 
       - name: Maven Resources clean-build
         run : |
@@ -50,7 +50,7 @@ jobs:
       - name: Docker Resources update
         run : |
           cd i113_eureka
-          ./i113_resources_update.sh          
+          bash i113_resources_update.sh          
                  
         
 
