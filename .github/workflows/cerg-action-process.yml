@@ -23,6 +23,7 @@ jobs:
           cd i113_eureka
           mvn clean
           mvn install
+          ./i113_eureka_update.sh
           cd ..
           
       - name: Maven Gateway clean-build
@@ -30,6 +31,7 @@ jobs:
           cd i113_gateway
           mvn clean
           mvn install
+          ./i113_gateway_update.sh
           cd ..          
 
       - name: Maven Resources clean-build
@@ -37,6 +39,7 @@ jobs:
           cd i113_resources
           mvn clean
           mvn install
+          ./i113_resources_update.sh          
           cd ..             
                  
         
