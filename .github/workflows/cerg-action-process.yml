@@ -20,6 +20,7 @@ jobs:
 
       - name: Maven clean-build
         run : |
+          pwd
           mvn clean
           mvn install
           
