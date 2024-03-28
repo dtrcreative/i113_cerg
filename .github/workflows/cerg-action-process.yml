@@ -27,35 +27,29 @@ jobs:
       - name: Docker Eureca update
         run : |
           cd i113_eureka
-          pwd
-          ls -la
-          ./i113_gateway_update.sh    
+          ./i113_eureka_update.sh   
           
       - name: Maven Gateway clean-build
         run : |
           cd i113_gateway
           mvn clean
           mvn install
-          cd - 
           
       - name: Docker Gateway update
         run : |
           cd i113_eureka
-          ./i113_gateway_update.sh
-          cd -           
+          ./i113_gateway_update.sh        
 
       - name: Maven Resources clean-build
         run : |
           cd i113_resources
           mvn clean
           mvn install
-          cd -  
           
       - name: Docker Resources update
         run : |
           cd i113_eureka
-          ./i113_resources_update.sh    
-          cd -           
+          ./i113_resources_update.sh          
                  
         
 
