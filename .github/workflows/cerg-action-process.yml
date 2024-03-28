@@ -27,6 +27,7 @@ jobs:
       - name: Docker Eureca update
         run : |
           cd i113_eureka
+          echo $USER
           ./i113_eureka_update.sh   
           
       - name: Maven Gateway clean-build
