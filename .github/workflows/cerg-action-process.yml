@@ -37,7 +37,7 @@ jobs:
           cd i113_resources
           mvn help:active-profiles
           mvn clean
-          mvn install
+          mvn install -P prod
 
       - name: Docker Eureca update
         run : |
