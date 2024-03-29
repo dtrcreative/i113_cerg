@@ -72,4 +72,4 @@ buildNumber.properties
 /mvnw.cmd
 /mvnw
 
-/src/main/resources/application-prod.yml
+src/main/resources/application-prod.yml
