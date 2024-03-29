@@ -55,7 +55,7 @@ jobs:
 
       - name: Docker Compose up
         run : |
-          cd /home/ditar/actions-runner/
+          cd /home/ditar/actions-runner/elli_project_work/
           docker compose up           
                  
         
