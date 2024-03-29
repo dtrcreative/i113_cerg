@@ -24,33 +24,37 @@ jobs:
           mvn clean
           mvn install
           
-      - name: Docker Eureca update
-        run : |
-          cd i113_eureka
-          echo $USER
-          bash i113_eureka_update.sh   
-          
       - name: Maven Gateway clean-build
         run : |
           cd i113_gateway
           mvn clean
           mvn install
-          
-      - name: Docker Gateway update
-        run : |
-          cd i113_eureka
-          bash i113_gateway_update.sh        
 
       - name: Maven Resources clean-build
         run : |
           cd i113_resources
           mvn clean
           mvn install
+
+      - name: Docker Eureca update
+        run : |
+          cd i113_eureka
+          bash i113_eureka_update.sh  
+
+      - name: Docker Gateway update
+        run : |
+          cd i113_gateway
+          bash i113_gateway_update.sh               
           
       - name: Docker Resources update
         run : |
-          cd i113_eureka
-          bash i113_resources_update.sh          
+          cd i113_resources
+          bash i113_resources_update.sh   
+
+      - name: Docker Compose up
+        run : |
+          cd /home/ditar/Projects/Elli_project/
+          docker compose up           
                  
         
 
