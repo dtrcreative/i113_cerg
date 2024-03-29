@@ -72,4 +72,7 @@ buildNumber.properties
 
 /mvnw.cmd
 /mvnw
-/i113_gateway/src/main/resources/application-prod.yml
+
+i113_gateway/src/main/resources/application-prod.yml
+i113_eureka/src/main/resources/application-prod.yml
+i113_resources/src/main/resources/application-prod.yml
