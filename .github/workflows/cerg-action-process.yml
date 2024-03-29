@@ -16,8 +16,10 @@ jobs:
           echo "Application name: ${{ env.APPLICATION_NAME}}"
           
       - name: Checkout
-        uses: actions/checkout@v4            
-
+        uses: actions/checkout@v4
+        with: 
+          clean: 'false'
+        
       - name: Maven Eureca clean-build
         run : |
           cd i113_eureka
