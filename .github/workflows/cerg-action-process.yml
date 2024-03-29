@@ -54,7 +54,7 @@ jobs:
       - name: Docker Compose up
         run : |
           cd /home/ditar/Projects/Elli_project/
-          ls -la            
+          docker compose up           
                  
         
 
