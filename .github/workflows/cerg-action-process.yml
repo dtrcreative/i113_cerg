@@ -49,7 +49,12 @@ jobs:
       - name: Docker Resources update
         run : |
           cd i113_resources
-          bash i113_resources_update.sh          
+          bash i113_resources_update.sh   
+
+      - name: Docker Compose up
+        run : |
+          cd ..
+          ls -la            
                  
         
 
