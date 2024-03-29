@@ -16,8 +16,10 @@ jobs:
           echo "Application name: ${{ env.APPLICATION_NAME}}"
           
       - name: Checkout
-        uses: actions/checkout@v1            
-
+        uses: actions/checkout@v4
+        with: 
+          clean: 'false'
+        
       - name: Maven Eureca clean-build
         run : |
           cd i113_eureka
@@ -51,10 +53,10 @@ jobs:
           cd i113_resources
           bash i113_resources_update.sh   
 
-      # - name: Docker Compose up
-      #   run : |
-      #     cd /home/ditar/actions-runner/
-      #     docker compose up           
+      - name: Docker Compose up
+        run : |
+          cd /home/ditar/actions-runner/elli_project_work/
+          docker compose up           
                  
         
 
