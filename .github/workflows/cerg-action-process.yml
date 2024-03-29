@@ -35,6 +35,7 @@ jobs:
       - name: Maven Resources clean-build
         run : |
           cd i113_resources
+          mvn help:active-profiles
           mvn clean
           mvn install
 
@@ -53,10 +54,10 @@ jobs:
           cd i113_resources
           bash i113_resources_update.sh   
 
-      - name: Docker Compose up
-        run : |
-          cd /home/ditar/actions-runner/elli_project_work/
-          docker compose up --detach        
+      # - name: Docker Compose up
+      #   run : |
+      #     cd /home/ditar/actions-runner/elli_project_work/
+      #     docker compose up --detach        
                  
         
 
