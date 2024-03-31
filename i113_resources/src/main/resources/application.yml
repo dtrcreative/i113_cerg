@@ -1,6 +1,6 @@
 spring:
   application:
-    name: api-resource-service
+    name: resource
   profiles:
 #    active: dev
     active: prod
