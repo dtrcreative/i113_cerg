@@ -24,7 +24,7 @@ management:
           - OPTIONS
       exposure:
         include: info,health,metrics,prometheus,loggers,gateway
-      base-path: /public/info
+      base-path: /gateway/info
   metrics:
     enable:
       jvm: true
