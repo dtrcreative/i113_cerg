@@ -2,8 +2,8 @@ spring:
   application:
     name: gateway
   profiles:
-#    active: dev
-    active: prod
+    active: dev
+#    active: prod
 
 management:
   endpoint:

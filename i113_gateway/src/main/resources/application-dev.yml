@@ -39,6 +39,11 @@ spring:
           predicates:
             - Path=/eureka/**
 
+        - id: security-service
+          uri: lb://security-service
+          predicates:
+            - Path=/api/auth/**
+
         - id: api-panda-service
           uri: lb://api-panda-service
           predicates:
@@ -49,10 +54,10 @@ spring:
           predicates:
             - Path=/api/events/**
 
-        - id: api-resource-service
-          uri: lb://api-resource-service
+        - id: api-resources-service
+          uri: lb://api-resources-service
           predicates:
-            - Path=/api/resource/**
+            - Path=/api/resources/**
 
         - id: api-telbot-service
           uri: lb://api-telbot-service
@@ -78,6 +83,9 @@ spring:
 #        provider:
 #          keycloak-provider:
 #            issuer-uri: http://localhost:28080/realms/i113_realm
+
+#key:
+#  security_adress: http://${server.ip}:8090/api/auth/
 
 eureka:
   client:

@@ -10,7 +10,7 @@ logging:
     name: logs/resources/resources.log
 
 spring:
-  application.name: api-resource-service
+  application.name: api-resources-service
   datasource:
     url: jdbc:postgresql://${server.ip}:5432/postgres?currentSchema=resources
     username: postgres
@@ -27,11 +27,11 @@ spring:
     user: postgres
     password: postgrespw
     default-schema: resources
-  security:
-    oauth2:
-      resource-server:
-        jwt:
-          issuer-uri: http://${server.ip}:28080/realms/i113_realm
+#  security:
+#    oauth2:
+#      resource-server:
+#        jwt:
+#          issuer-uri: http://${server.ip}:28080/realms/i113_realm
 
 eureka:
   client:
