@@ -1,3 +1,7 @@
+app:
+  delimiter: '=========================='
+  version: '@project.version@'
+
 spring:
   profiles:
 #    active: dev
